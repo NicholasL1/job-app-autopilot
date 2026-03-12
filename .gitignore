@@ -1,0 +1,32 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment / secrets
+.env
+.env.local
+*.key
+*.pem
+
+# Logs (keep the CSV and changelog, but ignore any generated exports)
+logs/*.bak
+logs/*.tmp
+
+# Node (if you add any scripts later)
+node_modules/
+npm-debug.log
+
+# Python (if you add any scripts later)
+__pycache__/
+*.pyc
+.venv/
+
+# Temporary files
+*.tmp
+*.temp

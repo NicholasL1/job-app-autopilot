@@ -1,0 +1,96 @@
+# ============================================================
+# JOB APP AUTOPILOT — Your Profile
+# Fill this in once. Everything else references this file.
+# ============================================================
+#
+# HOW TO USE:
+#   1. Replace every placeholder value (in quotes) with your real info
+#   2. Save this file
+#   3. Every shortcut prompt tells Claude to "use my profile" —
+#      paste this file's contents into that conversation once as context,
+#      or keep it open in a tab that you reference
+#
+# TIP: The more specific you are here, the better Claude's output will be.
+# ============================================================
+
+personal:
+  name: "Your Full Name"
+  email: "you@example.com"
+  phone: "(555) 000-0000"
+  location: "City, State/Province"
+  linkedin: "https://linkedin.com/in/yourprofile"
+  github: "https://github.com/yourusername"
+  portfolio: ""   # optional — leave blank if not applicable
+
+job_search:
+  # Job titles you're targeting (list all relevant variations)
+  titles:
+    - "Software Engineer II"
+    - "Full-Stack Developer"
+    - "Front-End Engineer"
+    # Examples for other fields:
+    # - "Marketing Manager"
+    # - "Product Designer"
+    # - "Data Analyst"
+
+  level: "mid"              # junior | mid | senior | lead | director
+  years_experience: 3       # total years of relevant experience
+
+  location_preference: "remote"   # remote | hybrid | onsite | flexible
+  preferred_cities:               # relevant if hybrid or onsite
+    - "Your City"
+    - "Another City"
+
+  salary_range:
+    min: 80000
+    max: 120000
+    currency: "USD"           # USD | EUR | GBP | CAD | AUD | etc.
+
+  # Skills that define your candidacy — used for keyword matching and filtering
+  primary_skills:             # things you're strong in and actively want to use
+    - "React"
+    - "TypeScript"
+    - "Node.js"
+  secondary_skills:           # things you know and are comfortable mentioning
+    - "PostgreSQL"
+    - "AWS"
+    - "Docker"
+  learning:                   # skills you're actively building — mention selectively
+    - "Kubernetes"
+
+  # Where to search for jobs
+  job_boards:
+    - "LinkedIn Jobs"
+    - "Indeed"
+    - "Wellfound"
+    - "Glassdoor"
+    # Add others: "Lever", "Greenhouse", "Workday", "company career pages"
+
+  # Filters to apply when searching
+  posted_within_days: 7      # only show listings posted this recently
+
+  # Roles/industries/companies to skip
+  exclusions:
+    industries: []            # e.g., ["crypto", "defense", "gambling"]
+    companies: []             # specific companies to skip
+    keywords: []              # e.g., ["unpaid", "volunteer", "commission-only"]
+
+communication:
+  tone: "professional but warm"   # how cover letters and messages should sound
+                                   # options: formal | professional but warm | conversational | enthusiastic
+
+  # Top 3 things to always emphasize — be specific and concrete
+  highlights:
+    - "Describe your #1 selling point (e.g., 'shipped features used by 500K users')"
+    - "Describe your #2 selling point (e.g., 'led a team of 4 through a full product relaunch')"
+    - "Describe your #3 selling point (e.g., 'reduced API response time by 40% through caching')"
+
+  # Things Claude should never overstate or fabricate
+  avoid:
+    - "Don't claim expertise in technologies I've only used casually"
+    - "Don't claim I managed people unless specified in that specific experience"
+    - "Don't use filler phrases like 'passionate about' or 'rockstar'"
+
+  # Additional context to improve personalization
+  why_you_job_hunt: ""        # optional: what motivates your search (helps tone)
+  deal_breakers: []           # e.g., ["no equity", "no PTO policy", "on-call required"]
