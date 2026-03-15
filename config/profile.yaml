@@ -14,13 +14,13 @@
 # ============================================================
 
 personal:
-  name: "Your Full Name"
-  email: "you@example.com"
-  phone: "(555) 000-0000"
-  location: "City, State/Province"
-  linkedin: "https://linkedin.com/in/yourprofile"
-  github: "https://github.com/yourusername"
-  portfolio: ""   # optional — leave blank if not applicable
+  name: "Nicholas Lachman"
+  email: "nlachhman2@gmail.com"
+  phone: "(647)-544-3904"
+  location: "Brampton, Ontario"
+  linkedin: "https://www.linkedin.com/in/nicholas-lachhman1/"
+  github: "https://github.com/NicholasL1"
+  portfolio: "https://nicholaslachhman.com/"   # optional — leave blank if not applicable
 
 job_search:
   # Job titles you're targeting (list all relevant variations)
@@ -28,25 +28,22 @@ job_search:
     - "Software Engineer II"
     - "Full-Stack Developer"
     - "Front-End Engineer"
-    # Examples for other fields:
-    # - "Marketing Manager"
-    # - "Product Designer"
-    # - "Data Analyst"
 
-  level: "mid"              # junior | mid | senior | lead | director
+  level: ["mid", "junior"]            # junior | mid | senior | lead | director
   years_experience: 3       # total years of relevant experience
 
-  location_preference: "remote"   # remote | hybrid | onsite | flexible
+  location_preference: ["remote", "hybrid"]   # remote | hybrid | onsite | flexible
   preferred_cities:               # relevant if hybrid or onsite
-    - "Your City"
-    - "Another City"
+    - "Toronto"
+    - "Mississauga"
+    - "North York"
 
   salary_range:
     min: 80000
     max: 120000
-    currency: "USD"           # USD | EUR | GBP | CAD | AUD | etc.
+    currency: ["CAD", "USD"]           # USD | EUR | GBP | CAD | AUD | etc.
 
-  # Skills that define your candidacy — used for keyword matching and filtering
+ # Skills that define your candidacy — used for keyword matching and filtering
   primary_skills:             # things you're strong in and actively want to use
     - "React"
     - "TypeScript"
@@ -94,3 +91,4 @@ communication:
   # Additional context to improve personalization
   why_you_job_hunt: ""        # optional: what motivates your search (helps tone)
   deal_breakers: []           # e.g., ["no equity", "no PTO policy", "on-call required"]
+
