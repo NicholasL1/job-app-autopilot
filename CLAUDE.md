@@ -12,7 +12,7 @@ config/
 
 logs/
   applications.csv      ← All job applications tracked here
-  resumes/              ← Tailored .tex resume versions per application
+  resumes/              ← Per job: [Company]-[Job]-[Date].tex (tailored resume) + .md (job info)
   cover-letters/        ← Tailored cover letters per application (.md)
 
 shortcuts/              ← Shortcut prompt source files (for reference)

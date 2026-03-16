@@ -44,11 +44,35 @@ Apply all High and Medium priority changes and save to:
 
 Company = TitleCase company name. Job = TitleCase role title, hyphens for spaces. Date = YYYY-MM-DD. Example: `Stripe-SoftwareEngineerII-2026-03-15.tex`.
 
-**STEP 5 — Summary**
+**STEP 5 — Save job info**
+Save a companion file at `logs/resumes/[Company]-[Job]-[Date].md` with this structure:
+
+```
+# [Company] — [Job Title]
+
+**Date Posted:** YYYY-MM-DD (or "Not listed")
+**Apply URL:** [url]
+**Location:** [location]
+**Salary:** [range or "Not listed"]
+
+## Key Requirements
+[bullet list of must-haves and nice-to-haves from the JD]
+
+## Match Assessment
+[Strong / Good / Stretch — one paragraph explaining fit and any gaps]
+
+## Resume Modifications
+[bullet list of every change made from config/resume.tex]
+
+## Notes
+[recruiter name, deadline, referral info, application quirks, anything else worth remembering]
+```
+
+**STEP 6 — Summary**
 - Match score for this role (1–10)
 - Anything worth addressing in a cover letter
 - Requirements I genuinely don't meet
-- Path where the tailored resume was saved
+- Paths where both files were saved
 
 Only suggest changes truthful to my actual experience. If a keyword appears in the listing but I have no relevant experience, say so — do not invent it.
 ```

@@ -37,8 +37,22 @@ If Stretch or weak match, tell me and ask: "Proceed anyway or skip?" before cont
 2b. **Tailor resume**
 - Apply High and Medium priority changes to produce a tailored resume
 - Save to: `logs/resumes/[Company]-[Job]-[Date].tex` (e.g., `Stripe-SoftwareEngineerII-2026-03-15.tex`)
+- Save a companion job info file to: `logs/resumes/[Company]-[Job]-[Date].md` containing:
+  - Date posted, apply URL, location, salary
+  - Key requirements (bullet list from the JD)
+  - Match assessment (Strong/Good/Stretch + reasoning)
+  - Resume modifications made (every change from config/resume.tex)
+  - Any other notes (recruiter, deadline, referral, quirks)
 
-2c. **Draft cover letter**
+2c. **Save job info**
+- Save a companion file to `logs/resumes/[Company]-[Job]-[Date].md` containing:
+  - Date posted, apply URL, location, salary
+  - Key requirements (bullet list from the JD)
+  - Match assessment (Strong/Good/Stretch + reasoning)
+  - Resume modifications made (every change from config/resume.tex)
+  - Any other notes (recruiter, deadline, referral, quirks)
+
+2d. **Draft cover letter**
 - Write a tailored cover letter using cover-letter-base.md structure and my communication preferences from profile.yaml
 - Save to: `logs/cover-letters/[Company]-[Job]-[Date].md` (e.g., `Stripe-SoftwareEngineerII-2026-03-15.md`)
 

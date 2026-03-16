@@ -28,10 +28,34 @@ Apply all High and Medium priority changes to produce a tailored version of my r
 
 Where Company is the hiring company name (TitleCase), Job is the role title (TitleCase, hyphens for spaces), and Date is today's date (YYYY-MM-DD). Example: `Stripe-SoftwareEngineerII-2026-03-15.tex`.
 
-**STEP 5 — Summary**
+**STEP 5 — Save job info**
+Save a companion file at `logs/resumes/[Company]-[Job]-[Date].md` with the following structure:
+
+```
+# [Company] — [Job Title]
+
+**Date Posted:** YYYY-MM-DD (or "Not listed" if unavailable)
+**Apply URL:** [url]
+**Location:** [location]
+**Salary:** [range or "Not listed"]
+
+## Key Requirements
+[bullet list of must-haves and nice-to-haves from the JD]
+
+## Match Assessment
+[Strong / Good / Stretch — one paragraph explaining fit and any gaps]
+
+## Resume Modifications
+[bullet list of every change made from config/resume.tex: which bullets were reordered, reworded, or added to skills]
+
+## Notes
+[anything else worth remembering: recruiter name, application quirks, referral info, deadline, etc.]
+```
+
+**STEP 6 — Summary**
 - Tailored resume match score for this role (1–10)
 - Anything to proactively address in the cover letter
 - Requirements I genuinely don't meet that I should be upfront about
-- The path where the tailored resume was saved
+- Paths where the resume and job info files were saved
 
 Only suggest changes truthful to my actual resume and profile. If a keyword appears in the listing but I have no relevant experience, say so.
