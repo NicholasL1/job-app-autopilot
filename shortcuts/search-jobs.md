@@ -1,7 +1,7 @@
 # Search Jobs
 
 ## Purpose
-Scan the current job board tab, filter results to strong matches, and summarize the top listings with key details.
+Scan the current job board tab, apply filters from your profile, and summarize the top 5–10 matching listings. Use this as a standalone scouting step before running `/autopilot`, or when you just want to see what's out there.
 
 ## How to Install
 1. Open the Claude in Chrome extension
@@ -14,41 +14,30 @@ Scan the current job board tab, filter results to strong matches, and summarize 
 ## Prompt
 
 ```
-I'm job hunting and I need your help scanning this job board. Here's my context:
+Read config/profile.yaml and logs/applications.csv from the local project.
 
-**My target roles:** [paste your job_search.titles from profile.yaml]
-**My primary skills:** [paste your primary_skills from profile.yaml]
-**Location preference:** [paste your location_preference from profile.yaml]
-**Preferred cities (if not remote):** [paste your preferred_cities]
-**Exclude:** [paste your exclusions from profile.yaml, or "none"]
-**Only show listings posted in the last:** [paste your posted_within_days] days
+On the job board currently open in this tab:
 
-Please do the following on the job board currently open in this tab:
+1. **Search** using my target job titles from profile.yaml (job_search.titles). Try multiple title variations if the board supports it.
+2. **Filter** results: location preference, posted_within_days, and salary range from profile.yaml. Apply whatever filters the board supports.
+3. **Scroll** through at least 2–3 pages of results (30–50 listings).
+4. **Skip** anything matching exclusions in profile.yaml, and any company already in logs/applications.csv.
+5. **Summarize** the top 5–10 matches:
 
-1. **Search** using my target job titles. Try multiple title variations if the board supports it (e.g., "Software Engineer" AND "Full-Stack Developer").
-2. **Filter** results to match my location preference and recency requirement. If the board has salary filters, apply my range too.
-3. **Scroll through** the results (at least the first 2–3 pages or 30–50 listings).
-4. **Evaluate** each listing against my skills and exclusions. Skip anything in my excluded industries, companies, or containing excluded keywords.
-5. **Summarize** the top 5–10 matches in a table with these columns:
-   - Company
-   - Role Title
-   - Location / Work Style
-   - Key Requirements (3–5 bullets)
-   - Salary (if listed)
-   - URL
-   - Match Score (Strong / Good / Stretch) with a one-sentence reason
+| # | Company | Role | Location / Style | Salary | Match Score | URL |
+|---|---|---|---|---|---|---|
 
-After the table, tell me:
-- How many total listings you reviewed
-- Any patterns you noticed (common requirements, hot skills, salary trends)
-- Which 2–3 you'd recommend I apply to first and why
+Match Score: Strong / Good / Stretch — one-sentence reason for each.
 
-Be honest about stretch roles. I'd rather know upfront than be surprised.
+After the table:
+- How many total listings reviewed
+- Any patterns noticed (recurring requirements, salary trends, hot skills)
+- Top 2–3 picks and why
+
+Do not navigate to any company websites. Read listings inline from the job board only.
 ```
 
 ## Tips
-- Run this shortcut on LinkedIn Jobs, Indeed, Wellfound, or any standard job board — the prompt works on all of them.
-- If a board requires you to log in, do that first, then run the shortcut.
-- For LinkedIn specifically, use the "Jobs" tab with filters already set before running — Claude will pick up where your filters left off.
-- Save the output somewhere (a note, your changelog) before navigating away — Claude can't scroll back.
-- Run this daily or every other day for best results. New listings expire fast.
+- Run this first to scout, then run `/autopilot` to tailor resumes for the ones you want.
+- Log in to the job board before running this.
+- LinkedIn Jobs, Indeed, Wellfound, and Glassdoor all work well with this shortcut.

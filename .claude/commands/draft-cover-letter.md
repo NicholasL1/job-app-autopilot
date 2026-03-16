@@ -1,19 +1,3 @@
-# Draft Cover Letter
-
-## Purpose
-Read the current job listing and draft a tailored cover letter using your base template. Saves to logs/cover-letters/.
-
-## How to Install
-1. Open the Claude in Chrome extension
-2. Go to Settings → Shortcuts (or "Saved Prompts")
-3. Click "New Shortcut"
-4. Set the slash command to `/draft-cover-letter`
-5. Paste the prompt below into the body
-6. Save
-
-## Prompt
-
-```
 Read config/resume.md, config/profile.yaml, and config/cover-letter-base.md from the local project.
 
 Then draft a tailored cover letter for the job listing open in this tab.
@@ -53,9 +37,3 @@ Save the final draft to:
 - Path where the file was saved
 
 Output the draft first, then the checklist.
-```
-
-## Tips
-- Run `/tailor-resume` first — the gap analysis often reveals what the cover letter should address.
-- 300 words is the ceiling. Shorter is fine.
-- Read the draft out loud. If any sentence sounds like a robot wrote it, ask Claude to revise that line.

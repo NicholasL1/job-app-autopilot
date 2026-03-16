@@ -1,7 +1,7 @@
-# Apply to Job
+# Apply to Job (Prep)
 
 ## Purpose
-Read the current job listing, compare it to your resume, fill out the application form step by step, and pause for your explicit approval before anything is submitted.
+Single-job prep shortcut: reads the listing visible in the current tab, tailors your resume, optionally drafts a cover letter, and logs the job to applications.csv with status "Ready to Apply". You apply manually.
 
 ## How to Install
 1. Open the Claude in Chrome extension
@@ -14,57 +14,47 @@ Read the current job listing, compare it to your resume, fill out the applicatio
 ## Prompt
 
 ```
-I'm about to apply to the job listing open in this tab. Please help me fill out the application carefully and accurately. Here's my context:
+Read config/resume.md, config/profile.yaml, and config/cover-letter-base.md from the local project.
+Also read logs/applications.csv to check if I've already prepped for this company.
 
-**My resume:** [paste your resume.md contents, or say "I'll paste it below"]
-**My profile:** [paste key sections from profile.yaml — personal info, skills, highlights]
+Read the job listing currently visible in this tab. Do not navigate to the company's own website — use the description as shown on this page.
 
-Follow these steps exactly:
+**STEP 1 — Parse the listing**
+- Company name and exact role title
+- Must-have vs. nice-to-have requirements
+- Any red flags worth knowing (e.g., excessive requirements, vague scope)
+- Application URL (if visible on this page)
 
-**STEP 1 — Read the listing**
-Read the full job description on this page. Summarize:
-- Company name and role title
-- Key requirements (must-haves vs. nice-to-haves)
-- Any red flags or things I should know before applying
-- The application method (their own form, LinkedIn Easy Apply, external ATS, etc.)
+**STEP 2 — Fit assessment**
+- Match rating: Strong / Moderate / Stretch
+- Requirements I don't meet — list honestly
+- Recommendation: proceed or skip
 
-**STEP 2 — Compare to my background**
-Before touching any form:
-- How well do I match this role? (Strong / Moderate / Stretch)
-- Are there requirements I don't meet? List them honestly.
-- Are there any claims I should NOT make based on my actual experience?
-- Recommend whether I should proceed or skip this application.
+Ask: "Proceed with tailoring, or skip?" — wait for my reply.
 
-Wait for me to say "proceed" before continuing.
+**STEP 3 — Tailor resume**
+Apply High and Medium priority changes. Save to:
+`logs/resumes/YYYY-MM-DD-[company]-[role-slug].md`
 
-**STEP 3 — Fill out the form**
-If I say proceed, work through the application form field by field:
-- Personal info: use my name, email, phone, LinkedIn, location from my profile
-- Work history: use dates, titles, and companies from my resume exactly
-- Education: use my actual degree and institution
-- Free-text questions: draft responses based on my experience — be specific, don't fabricate
-- Skills assessments: only claim skills I actually listed in my profile
-- If any field is unclear or requires information you don't have, STOP and ask me
+Show me the key changes made.
 
-**STEP 4 — FULL STOP BEFORE SUBMISSION**
-Before clicking any Submit button, show me a complete summary of everything you filled in:
-- Every field and the value you entered
-- Any free-text answers you wrote
-- Flag anything you're uncertain about
+**STEP 4 — Cover letter (optional)**
+Ask: "Draft a cover letter too? (yes/no)"
 
-Then ask: "Does everything look accurate? Type YES to submit or tell me what to change."
+If yes: draft using cover-letter-base.md structure and save to:
+`logs/cover-letters/YYYY-MM-DD-[company]-[role-slug].md`
 
-Do NOT submit the application until I explicitly type YES.
+**STEP 5 — Log to CSV**
+Append to logs/applications.csv:
+`YYYY-MM-DD,[company],[role],[url],Ready to Apply,[match_score],logs/resumes/[file],[cover_letter_file_or_blank],,[YYYY-MM-DD+7]`
 
-**STEP 5 — After submission**
-Once I confirm:
-- Tell me the confirmation number or confirmation message if visible
-- Remind me to log this application using: ./scripts/new-application.sh "Company" "Role" "URL" "Applied"
+Confirm the row was written and show it.
+
+---
+Apply to this job manually using the saved resume. After you submit, update the status in logs/applications.csv from "Ready to Apply" → "Applied".
 ```
 
 ## Tips
-- Always read STEP 2's assessment before saying "proceed" — if the match is weak, consider whether to apply at all.
-- For applications with uploaded resume PDFs, Claude can't upload files directly. It will fill the form fields and tell you when to manually upload.
-- Some ATS systems (Workday, Greenhouse, Lever) have multi-step forms. Tell Claude "next page" to continue after each section.
-- If the form asks trick questions (e.g., "Are you legally authorized to work?"), answer these yourself — don't delegate.
-- The hard stop at Step 4 is intentional and non-negotiable. Never skip it.
+- Works with any job board that shows the full JD inline (LinkedIn, Indeed, Wellfound, Glassdoor).
+- Use `/autopilot` for bulk prep across multiple jobs in one session.
+- Cover letter is optional — skip it for roles where it isn't required.

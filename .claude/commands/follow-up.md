@@ -1,19 +1,3 @@
-# Follow Up
-
-## Purpose
-Draft a professional follow-up email for a job you applied to. Checks applications.csv for context on when you applied.
-
-## How to Install
-1. Open the Claude in Chrome extension
-2. Go to Settings → Shortcuts (or "Saved Prompts")
-3. Click "New Shortcut"
-4. Set the slash command to `/follow-up`
-5. Paste the prompt below into the body
-6. Save
-
-## Prompt
-
-```
 Read config/profile.yaml and logs/applications.csv from the local project.
 
 I need to write a follow-up email for a job application.
@@ -53,9 +37,3 @@ Once I've answered, draft a follow-up email that:
 Do not send anything. Output draft and guidance only.
 
 After I confirm the draft is good, update the notes column in logs/applications.csv for this application with: "Followed up on YYYY-MM-DD"
-```
-
-## Tips
-- One follow-up is usually enough. Two at most.
-- If you have a contact name, address them directly.
-- If the listing is down or the company has announced layoffs, mention that context.
