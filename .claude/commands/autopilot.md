@@ -36,16 +36,10 @@ If Stretch or weak match, tell me and ask: "Proceed anyway or skip?" before cont
 
 2b. **Tailor resume**
 - Apply High and Medium priority changes to produce a tailored resume
-- Save to: `logs/resumes/[Company]-[Job]-[Date].tex` (e.g., `Stripe-SoftwareEngineerII-2026-03-15.tex`)
-- Save a companion job info file to: `logs/resumes/[Company]-[Job]-[Date].md` containing:
-  - Date posted, apply URL, location, salary
-  - Key requirements (bullet list from the JD)
-  - Match assessment (Strong/Good/Stretch + reasoning)
-  - Resume modifications made (every change from config/resume.tex)
-  - Any other notes (recruiter, deadline, referral, quirks)
+- Save to: `logs/resumes/[Date]/[Company]-[Job]-[Date].tex` (e.g., `logs/resumes/2026-03-15/Stripe-SoftwareEngineerII-2026-03-15.tex`)
 
 2c. **Save job info**
-- Save a companion file to `logs/resumes/[Company]-[Job]-[Date].md` containing:
+- Save a companion file to `logs/resumes/[Date]/[Company]-[Job]-[Date].md` containing:
   - Date posted, apply URL, location, salary
   - Key requirements (bullet list from the JD)
   - Match assessment (Strong/Good/Stretch + reasoning)

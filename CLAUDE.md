@@ -12,7 +12,10 @@ config/
 
 logs/
   applications.csv      ← All job applications tracked here
-  resumes/              ← Per job: [Company]-[Job]-[Date].tex (tailored resume) + .md (job info)
+  resumes/
+    YYYY-MM-DD/         ← One folder per session date
+      [Company]-[Job]-[Date].tex  ← Tailored resume
+      [Company]-[Job]-[Date].md   ← Job info (description, requirements, modifications, notes)
   cover-letters/        ← Tailored cover letters per application (.md)
 
 shortcuts/              ← Shortcut prompt source files (for reference)
@@ -56,9 +59,10 @@ When tailoring for a specific application:
 
 ## File Naming Convention
 
-- Tailored resumes: `logs/resumes/[Company]-[Job]-[Date].tex`
+- Tailored resumes: `logs/resumes/[Date]/[Company]-[Job]-[Date].tex`
+- Job info files: `logs/resumes/[Date]/[Company]-[Job]-[Date].md`
 - Cover letters: `logs/cover-letters/[Company]-[Job]-[Date].md`
-- Format: TitleCase company name, TitleCase job title (hyphens for spaces), YYYY-MM-DD date (e.g., `Stripe-SoftwareEngineerII-2026-03-15.tex`)
+- Format: TitleCase company name, TitleCase job title (hyphens for spaces), YYYY-MM-DD date (e.g., `logs/resumes/2026-03-15/Stripe-SoftwareEngineerII-2026-03-15.tex`)
 
 ## applications.csv Columns
 
@@ -68,7 +72,7 @@ date,company,role,url,status,match_score,resume_file,cover_letter_file,notes,fol
 
 - `status`: Applied | Interviewing | Offer | Rejected | Withdrawn | No Response | Ready to Apply
 - `match_score`: Strong / Good / Stretch
-- `resume_file`: e.g., `logs/resumes/Stripe-SoftwareEngineerII-2026-03-15.tex`
+- `resume_file`: e.g., `logs/resumes/2026-03-15/Stripe-SoftwareEngineerII-2026-03-15.tex`
 - `follow_up_date`: YYYY-MM-DD, typically 7 days after applying
 
 ## Shortcut Commands

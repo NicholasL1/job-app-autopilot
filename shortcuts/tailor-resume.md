@@ -40,12 +40,12 @@ Ranked by impact. For each:
 
 **STEP 4 — Save the tailored resume**
 Apply all High and Medium priority changes and save to:
-`logs/resumes/[Company]-[Job]-[Date].tex`
+`logs/resumes/[Date]/[Company]-[Job]-[Date].tex`
 
-Company = TitleCase company name. Job = TitleCase role title, hyphens for spaces. Date = YYYY-MM-DD. Example: `Stripe-SoftwareEngineerII-2026-03-15.tex`.
+Date = YYYY-MM-DD folder. Company = TitleCase. Job = TitleCase with hyphens for spaces. Example: `logs/resumes/2026-03-15/Stripe-SoftwareEngineerII-2026-03-15.tex`.
 
 **STEP 5 — Save job info**
-Save a companion file at `logs/resumes/[Company]-[Job]-[Date].md` with this structure:
+Save a companion file at `logs/resumes/[Date]/[Company]-[Job]-[Date].md` with this structure:
 
 ```
 # [Company] — [Job Title]

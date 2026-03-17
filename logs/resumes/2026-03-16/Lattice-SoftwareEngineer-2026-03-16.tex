@@ -1,0 +1,191 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Original author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.4cm, right=1.4cm, bottom=1.5cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+\definecolor{awesome}{HTML}{0033cc}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% Social information separator
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\makeatletter
+\patchcmd{\@sectioncolor}{\color}{\mdseries\color}{}{}
+\makeatother
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+\name{Nicholas}{Lachhman}
+
+\mobile{(647) 544-3904}
+\email{nlachhman2@gmail.com}
+\homepage{nicholaslachhman.com}
+\github{NicholasL1}
+\linkedin{nicholas-lachhman1}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makecvheader[C]
+
+%-------------------------------------------------------------------------------
+%	EXPERIENCE
+%-------------------------------------------------------------------------------
+\cvsection{Experience}
+
+\begin{cventries}
+
+  \definecolor{lightblue}{RGB}{0, 57, 230}
+
+  \cventry
+    {\color{lightblue}{ASSOCIATE FULL-STACK ENGINEER}}
+    {OMERS}
+    {Toronto, ON}
+    {Jan. 2025 -- Present}
+    {
+      \begin{cvitems}
+        \item{Designed and built a \textbf{retirement planner} in \textbf{Next.js}/\textbf{NestJS}, integrating \textbf{REST APIs} for pension, RRSP, TFSA, CPP, and OAS data, serving \textbf{250,000+} members and reducing manual planning effort by \textbf{80\%}}
+        \item{Built \textbf{Jest} and \textbf{React Testing Library} suite with \textbf{500+} unit and integration tests, enforcing \textbf{>92\%} coverage in \textbf{CI/CD} pipelines and reducing post-release defects by \textbf{25\%}}
+        \item{Built \textbf{Leave Period Dashboard} in \textbf{Next.js/NestJS}, enabling employers to manage \textbf{1,000+} leaves, routing \textbf{\$1M+} annually}
+        \item{Optimized \textbf{Postgres} queries using \textbf{Kysely}, EXPLAIN plans, and targeted indexing, reducing \textbf{p95} query latency by \textbf{45\%} and cutting database load by \textbf{30\%}}
+        \item{Delivered \textbf{Disability Dashboard} 1 month ahead of go-live, optimizing query times by \textbf{96\%} via asynchronous \textbf{Redis} caching}
+        \item{Built end-to-end observability with \textbf{Datadog APM} and \textbf{RUM}, instrumenting \textbf{100\%} of critical services; reduced MTTR by \textbf{40\%} and cut alert noise by \textbf{35\%}}
+      \end{cvitems}
+    }
+
+  \vspace{3mm}
+
+  \cventry
+    {\color{lightblue}{SOFTWARE ENGINEER INTERN}}
+    {Radical AI}
+    {New York, NY}
+    {Apr. 2024 -- Aug. 2024}
+    {
+      \begin{cvitems}
+        \item{Reduced search query latency by \textbf{44\%} by redesigning \textbf{Firebase} DB schema and \textbf{Node.js} functions to include indexing/caching}
+        \item{Built a shared \textbf{component library} of \textbf{10+} reusable \textbf{Next.js} components adopted across \textbf{3} product features, reducing load times by \textbf{30\%}}
+        \item{Defined \textbf{RBAC} and \textbf{Firestore} security rules managing access for over \textbf{10,000} users, eliminating unauthorized data exposure across all roles}
+        \item{Identified and resolved performance bottlenecks via load testing with \textbf{Apache JMeter} across \textbf{50+} scenarios, reducing system downtime by \textbf{27\%}}
+      \end{cvitems}
+    }
+
+  \vspace{3mm}
+
+  \cventry
+    {\color{lightblue}{SOFTWARE ENGINEER INTERN}}
+    {Pelmorex Corp.}
+    {Oakville, ON}
+    {May 2023 -- Aug. 2023}
+    {
+      \begin{cvitems}
+        \item{Refactored proxy server authentication layer in \textbf{TypeScript}, reducing authentication errors by \textbf{33\%}}
+        \item{Implemented \textbf{authorization token sanitization} for \textbf{LoginRadius} users, eliminating token-replay vulnerability class and securing \textbf{10,000+} accounts}
+        \item{Configured and managed \textbf{Kubernetes} clusters to deploy \textbf{microservices}, reducing deployment time by \textbf{40\%}}
+        \item{Delivered net-new temperature and wind layers on \textbf{TWN Maps} using \textbf{React}, \textbf{MapLibreGL}, and \textbf{GeoJSON}}
+      \end{cvitems}
+    }
+
+  \vspace{3mm}
+
+  \cventry
+    {\color{lightblue}{FRONT-END DEVELOPER INTERN}}
+    {Goeasy Ltd.}
+    {Mississauga, ON}
+    {May 2022 -- Dec. 2022}
+    {
+      \begin{cvitems}
+        \item{Built a \textbf{GraphQL} API with \textbf{Apollo} and \textbf{Node.js} unifying RDS and Contentful data sources, reducing response time by \textbf{37\%}}
+        \item{Migrated company website to \textbf{Next.js} with \textbf{SSR} and \textbf{responsive design}, improving page load speed by \textbf{20\%}}
+        \item{Achieved \textbf{95\%} code coverage by building comprehensive API and unit tests with \textbf{Postman}, \textbf{Swagger}, and \textbf{Jest}}
+      \end{cvitems}
+    }
+
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+%	PROJECTS
+%-------------------------------------------------------------------------------
+\cvsection{Projects}
+
+\begin{cventries}
+
+  \cventry
+  {Next.js 16, React 19, TypeScript, Go 1.23, AWS Textract, Claude, Supabase, Tailwind CSS}
+  {\href{https://finsplain.net}{\textcolor{black}{\underline{FinSplain}} \faExternalLink}}
+  {}
+  {}
+  {
+    \begin{cvitems}
+      \item {Built \textbf{full-stack AI financial doc} platform in \textbf{Next.js 16}/\textbf{React 19} with stateless \textbf{Go 1.23} microservice for \textbf{2,000+} users}
+      \item {Engineered \textbf{Go/chi v5} backend with \textbf{RS256 JWT} auth, \textbf{token-bucket rate limiting}, and multipart validation up to \textbf{20 MB}}
+      \item {Built \textbf{OCR-to-AI} pipeline via \textbf{AWS Textract} and \textbf{Claude Opus} for fee detection and spending anomaly analysis}
+      \item {Implemented \textbf{Supabase Auth} with \textbf{RLS} policies, \textbf{Next.js} middleware routing, and real-time document status subscriptions}
+    \end{cvitems}
+  }
+
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+%	SKILLS
+%-------------------------------------------------------------------------------
+\cvsection{Skills}
+
+\begin{cvskills}
+  \cvskill
+  {Languages}
+  {TypeScript 5, GraphQL, Go, HTML/CSS, SQL}
+  \cvskill
+  {Frameworks}
+  {React 19, Next.js 16, Node.js, NestJS 10, Redux, Jest, React Testing Library, Tailwind CSS}
+  \cvskill
+  {Tools}
+  {PostgreSQL, AWS, Git, Docker, Supabase, Redis, Datadog, TRPC, MongoDB}
+\end{cvskills}
+
+%-------------------------------------------------------------------------------
+%	EDUCATION
+%-------------------------------------------------------------------------------
+\cvsection{Education}
+\vspace{-2mm}
+
+\begin{cventries}
+  \cventry
+  {2020-2025}
+  {BSc Computer Science, First Class Standing (GPA: 3.8/4.0)}
+  {York University}
+  {Toronto, ON}
+  {%
+    \begin{cvitems}
+      \item {Relevant Coursework: Data Structures \& Algorithms, Operating Systems, Distributed Systems, Database Systems, Software Design Patterns, Computer Networks}
+    \end{cvitems}
+  }
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+\end{document}

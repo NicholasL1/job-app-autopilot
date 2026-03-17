@@ -55,10 +55,10 @@ For each job I selected, working one at a time:
 - If a keyword appears in the listing but I have no relevant experience, skip it
 
 2c. Save the tailored resume to:
-`logs/resumes/[Company]-[Job]-[Date].tex` (e.g., `Stripe-SoftwareEngineerII-2026-03-15.tex`)
+`logs/resumes/[Date]/[Company]-[Job]-[Date].tex` (e.g., `logs/resumes/2026-03-15/Stripe-SoftwareEngineerII-2026-03-15.tex`)
 
 2d. Save a companion job info file to:
-`logs/resumes/[Company]-[Job]-[Date].md`
+`logs/resumes/[Date]/[Company]-[Job]-[Date].md`
 Include: date posted, apply URL, location, salary, key requirements (bullet list), match assessment (Strong/Good/Stretch + reasoning), resume modifications made (every change from config/resume.tex), and any other notes (recruiter, deadline, referral, quirks).
 
 2e. Append a row to logs/applications.csv:

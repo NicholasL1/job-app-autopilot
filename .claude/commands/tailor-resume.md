@@ -24,12 +24,12 @@ Ranked list from highest to lowest impact. For each:
 
 **STEP 4 — Save the tailored resume**
 Apply all High and Medium priority changes to produce a tailored version of my resume. Save it to:
-`logs/resumes/[Company]-[Job]-[Date].tex`
+`logs/resumes/[Date]/[Company]-[Job]-[Date].tex`
 
-Where Company is the hiring company name (TitleCase), Job is the role title (TitleCase, hyphens for spaces), and Date is today's date (YYYY-MM-DD). Example: `Stripe-SoftwareEngineerII-2026-03-15.tex`.
+Where Date is today's date (YYYY-MM-DD), Company is TitleCase, Job is TitleCase with hyphens for spaces. Example: `logs/resumes/2026-03-15/Stripe-SoftwareEngineerII-2026-03-15.tex`.
 
 **STEP 5 — Save job info**
-Save a companion file at `logs/resumes/[Company]-[Job]-[Date].md` with the following structure:
+Save a companion file at `logs/resumes/[Date]/[Company]-[Job]-[Date].md` with the following structure:
 
 ```
 # [Company] — [Job Title]
